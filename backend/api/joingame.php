@@ -29,7 +29,7 @@ try {
 }
 
 
-if (!isset($games[$playerGameId]) or $playerGameId<1000000 or $playerGameId>9999999) {
+if (!isset($games[$playerGameId]) or $playerGameId<1000 or $playerGameId>9999) {
     echo json_encode([
         "success" => false,
         "message" => "Incorrect game id"

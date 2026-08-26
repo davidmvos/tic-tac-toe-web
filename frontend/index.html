@@ -275,7 +275,8 @@
 
                         $("#prejoin").show();
 
-                        $("#prejoin-gameid").val(`${gameId.toString().substring(0,3)} ${gameId.toString().substring(3)}`);
+                        // $("#prejoin-gameid").val(`${gameId.toString().substring(0,2)} ${gameId.toString().substring(2)}`); // keeping this here just in case
+                        $("#prejoin-gameid").val(`${gameId.toString()}`);
 
                         $("#prejoin-gameid-wrapper").on("click", function() {
                             navigator.clipboard.writeText(gameId.toString());
@@ -303,7 +304,8 @@
 
             let joinId = parseInt( $("#joincode-input").val().replace(/[^0-9]/g, '') );
 
-            if (!( joinId >= 1000000 && joinId <= 9999999)) {
+            if (!( joinId >= 1000 && joinId <= 9999)) {
+                console.log("Id falsch (client)")
                 return
             } else {
                 output(`Trete spiel bei: ${joinId}`);
@@ -339,7 +341,7 @@
                             selfIsCross = true;
                             gameRunning = true;
 
-                            setInterval(updateGameBoard, 1500);
+                            setInterval(updateGameBoard, 1000);
 
 
                         } else {

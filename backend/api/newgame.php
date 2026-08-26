@@ -70,7 +70,7 @@ if ($result->num_rows > 0) {
 $stmt = $conn->prepare("INSERT INTO `tictactoe`(`gameId`, `gameState`, `playerO`, `playerX`, `playerXconnected`) VALUES (?, ?, ?, ?, ?)");
 $stmt->bind_param("isiii", $gameId, $gameState, $playerO, $playerX, $playerXconnected);
 
-$gameId = rand(1000000, 9999999);
+$gameId = rand(1000, 9999);
 $gameState = json_encode(["", "", "", "", "", "", "", "", ""]);
 $playerO = rand(1000000, 9999999);
 $playerX = rand(1000000, 9999999);
@@ -78,7 +78,7 @@ $playerXconnected = 0;
 
 if (isset($data[$gameId])) {
     while (isset($data[$gameId])) {
-        $gameId = rand(1000000, 9999999);
+        $gameId = rand(1000, 9999);
     }
 }
 

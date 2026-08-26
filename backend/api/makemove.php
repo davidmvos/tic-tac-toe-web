@@ -51,7 +51,7 @@ $games = getGames($conn);
 
 
 
-if (!isset($games[$gameId]) or $gameId<1000000 or $gameId>9999999) {
+if (!isset($games[$gameId]) or $gameId<1000 or $gameId>9999) {
     echo json_encode([
         "success" => false,
         "message" => "Incorrect game id"
