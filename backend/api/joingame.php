@@ -1,4 +1,5 @@
-<?
+<?php
+require_once 'cors.php';
 require_once 'env.php';
 require_once 'get_payload.php';
 require_once 'getGames.php';

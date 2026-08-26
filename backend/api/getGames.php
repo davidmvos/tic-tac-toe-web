@@ -1,4 +1,5 @@
-<?
+<?php
+require_once 'cors.php';
 function getGames($mysqli) {
     $sql = "SELECT * FROM `tictactoe`";
     $result = $mysqli->query($sql);
