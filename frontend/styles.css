@@ -326,6 +326,9 @@ body {
   transform: scale(1);
 }
 @media screen and (max-width: 1050px) {
+  #language-selection-wrapper:hover, #language-selection-wrapper:active {
+    transform: scale(1);
+  }
   #language-selection-wrapper {
     max-width: 90vw;
     position: relative;
@@ -333,9 +336,6 @@ body {
     width: 83.25vw;
     left: 8.5vw;
     top: 93vh;
-  }
-  #language-selection-wrapper:hover, #language-selection-wrapper:active {
-    transform: scale(1);
   }
 }
 
@@ -488,11 +488,11 @@ body {
   transform: scale(1.05);
 }
 @media screen and (max-width: 1050px) {
-  #joincode input {
-    width: 90vw;
-  }
   #joincode input:hover, #joincode input:active {
     transform: scale(1);
+  }
+  #joincode input {
+    width: 90vw;
   }
 }
 #joincode label {
@@ -516,11 +516,11 @@ body {
   transform: scale(1);
 }
 @media screen and (max-width: 1050px) {
-  #joincode #joincode-button {
-    max-width: 90vw;
-  }
   #joincode #joincode-button:hover, #joincode #joincode-button:active {
     transform: scale(1);
+  }
+  #joincode #joincode-button {
+    max-width: 90vw;
   }
 }
 
@@ -549,7 +549,7 @@ body {
   margin: 0;
   margin-top: -20px;
 }
-#gameover #gameover-winner-wrapper {
+#gameover #gameover-winner-wrapper, #gameover #gameover-tie-wrapper {
   font-size: 60px;
   padding: 0;
   margin: 0;

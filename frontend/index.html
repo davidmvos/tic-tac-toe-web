@@ -82,7 +82,9 @@
     <div id="gameover" hidden="true">
         <div>
             <div id="gameover-title" translation="gameover-title">Game Over!</div> <br>
-            <div id="gameover-winner-wrapper" translation="gameover-winner-wrapper"><span id="gameover-winner">O</span> hat gewonnen!</div> <br>
+            <div id="gameover-winner-wrapper" translation="gameover-winner-wrapper"><span id="gameover-winner">O</span> hat gewonnen!</div>
+            <div id="gameover-tie-wrapper" translation="gameover-tie-wrapper">Unentschieden!</div> <br>
+
             <div id="gameover-return" translation="gameover-return" >Menü (<span id="gameover-return-countdown">7</span>)</div>
         </div>
     </div>
@@ -124,6 +126,10 @@
                 return board[a]; 
               }
             }
+
+            if (!playerTurns.includes("")) {
+                return "-"
+            }
           
             return null; // no winner
         }
@@ -135,9 +141,19 @@
                 gameRunning = false;
                 clearInterval(updateGameBoard);
 
+                if (w == "-") {
+                    $("#gameover-tie-wrapper").show();
+                    $("#gameover-winner-wrapper").hide();
+                } else {
+                    $("#gameover-tie-wrapper").hide();
+                    $("#gameover-winner-wrapper").show();
+                }
+
                 playerTurns = ["", "", "", "", "", "", "", "", ""]
                 crossToTurn = false;
                 selfIsCross = false;
+
+                $("#joincode-input").val("");
 
                 $("#gameover-winner").text(w);
                 $("#gameover").show();

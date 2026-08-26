@@ -15,6 +15,7 @@
             "joincode-button": "Beitreten!",
             "gameover-title": "Game Over!",
             "gameover-winner-wrapper": "<span id='gameover-winner'>O</span> hat gewonnen!",
+            "gameover-tie-wrapper": "Unentschieden!",
             "gameover-return": "Menü (<span id='gameover-return-countdown'>7</span>)",
             "turnInfo": "Sie sind am Zug!",
             "language": "Sprache"
@@ -30,6 +31,7 @@
             "joincode-button": "Join!",
             "gameover-title": "Game Over!",
             "gameover-winner-wrapper": "<span id='gameover-winner'>O</span> has won!",
+            "gameover-tie-wrapper": "Game ended in a tie!",
             "gameover-return": "Menu (<span id='gameover-return-countdown'>7</span>)",
             "turnInfo": "It's your turn!",
             "language": "Language"
