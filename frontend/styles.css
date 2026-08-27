@@ -26,6 +26,9 @@ body {
     overflow: hidden;
   }
 }
+body {
+  overflow: hidden;
+}
 
 #turnInfo {
   position: absolute;
@@ -162,6 +165,7 @@ body {
   #prepop #prepop-panel {
     flex-flow: column;
     gap: 20px;
+    margin-top: 25px;
   }
 }
 #prepop #prepop-panel .prepop-option {
@@ -177,7 +181,7 @@ body {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
-    height: 250px;
+    height: 150px;
   }
 }
 #prepop #prepop-panel .prepop-option span {
@@ -187,6 +191,11 @@ body {
   left: 0;
   transform: translate(-50%, -50%);
   font-size: 60px;
+}
+@media screen and (max-width: 1050px) {
+  #prepop #prepop-panel .prepop-option span {
+    top: 20px;
+  }
 }
 #prepop #prepop-panel .prepop-option:hover {
   transform: scale(1.05);
@@ -254,7 +263,7 @@ body {
   cursor: unset;
   width: 370px;
   height: 350px;
-  top: 63vh;
+  top: 60vh;
   left: 78vw;
 }
 #language-selection-wrapper.active #language-selection-icon {
@@ -266,7 +275,7 @@ body {
     margin: 0;
     width: 83.25vw;
     left: 8.5vw;
-    top: 65vh;
+    top: 50vh;
   }
 }
 #language-selection-wrapper.active #language-selection-wrapper-active {
@@ -335,7 +344,10 @@ body {
     margin: 0;
     width: 83.25vw;
     left: 8.5vw;
-    top: 93vh;
+    top: 77vh;
+  }
+  #language-selection-wrapper.hide {
+    display: none;
   }
 }
 
@@ -375,6 +387,8 @@ body {
   #prejoin {
     height: 100vh;
     border-radius: 0px !important;
+    width: 100vw;
+    height: 100vh;
   }
 }
 #prejoin #prejoin-gameid-wrapper {
@@ -391,6 +405,7 @@ body {
     font-size: 70px;
     width: 420px;
     max-width: 80vw;
+    left: 0px;
   }
 }
 #prejoin #prejoin-gameid-wrapper #prejoin-gameid {
@@ -402,6 +417,12 @@ body {
   color: white;
   border: none;
   outline: none;
+}
+@media screen and (max-width: 1050px) {
+  #prejoin #prejoin-gameid-wrapper #prejoin-gameid {
+    background-color: rgba(255, 99, 97, 0);
+    width: 100%;
+  }
 }
 #prejoin #prejoin-gameid-wrapper *::-moz-selection {
   background-color: #FFA600;
@@ -539,6 +560,12 @@ body {
   height: 400px;
   text-align: center;
 }
+@media screen and (max-width: 1050px) {
+  #gameover {
+    width: 100vw;
+    height: 100vh;
+  }
+}
 #gameover div {
   padding: 0;
   margin: 0;
@@ -548,6 +575,14 @@ body {
   padding: 0;
   margin: 0;
   margin-top: -20px;
+}
+@media screen and (max-width: 1050px) {
+  #gameover #gameover-title {
+    line-height: 70px;
+    margin-top: 30vh;
+    font-size: 60px;
+    margin-bottom: -10px;
+  }
 }
 #gameover #gameover-winner-wrapper, #gameover #gameover-tie-wrapper {
   font-size: 60px;

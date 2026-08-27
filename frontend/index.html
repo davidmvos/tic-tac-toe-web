@@ -188,6 +188,7 @@
                 setTimeout(function() {
                     $("#gameover").fadeOut();
                     $("#prepop").fadeIn();
+                    $("#language-selection-wrapper").removeClass("hide");
                 }, 6800);
                 setTimeout(function() {
                     $("#gameover-return-countdown").text("7");
@@ -557,19 +558,31 @@
 
             $("#prejoin").hide();
             $("#joincode").hide();
+            $("#language-selection-wrapper").removeClass("hide");
 
 
-            $("#prepop-new").on("click", newGame);
-            $("#prepop-join").on("click", function(){$("#joincode").show(); $("#prepop").hide();});
+            $("#prepop-new").on("click", function() {
+                newGame();
+                $("#language-selection-wrapper").addClass("hide"); 
+            });
+
+            $("#prepop-join").on("click", function(){
+                $("#joincode").show(); 
+                $("#prepop").hide();
+                $("#language-selection-wrapper").addClass("hide"); 
+            });
+
             $("#joincode-button").on("click", joinGameHandler);
 
             $("#gameover-return").on("click", function() {
                 $("#gameover").hide();
                 $("#prepop").show();
+                $("#language-selection-wrapper").removeClass("hide");
             });
 
             $("#dismissStartPopup").on("click", function() {
                 $("#prepop").hide();
+                $("#language-selection-wrapper").removeClass("hide");
                 $("#turnInfo").show();
                 testMode = true;
             });
@@ -581,10 +594,6 @@
                     $("#language-selection-wrapper").addClass("active");
                 }
             });
-
-
-
-
 
         });
     </script>
